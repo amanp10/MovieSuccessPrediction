@@ -1,0 +1,21 @@
+import string
+
+fi=open("final.tsv")
+st=fi.read()
+list1=st.split('\n')
+list1.remove('')
+fi.close()
+print len(list1)
+
+list2=[]
+for i in range(0,5):
+	for j in range(0,30):
+		list2.append(list1[j*5+i])
+
+print len(list2)
+
+fi=open('final_rand.tsv','w')
+for i in list2:
+	fi.write(i+'\n')
+fi.close()
+

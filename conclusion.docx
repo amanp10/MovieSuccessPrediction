@@ -1,0 +1,15 @@
+Various Machine Learning alorithms were used to combine the featues and predict the IMDb rating of Bollywood movies. The 4 algorithms which were used are Polynomial Regression, Neural Networks, Fuzzy Logic, SVMs. Minimizing the the average and maximum error was the main objective while using different algorithms. Here, are the results.
+
+Polynomial Regression:
+An average error of 1.5 was recorded when three features namely Actor,Director Rating and Genre was considered for predicting the values. A maximum error of 3.5 was observed. The average error is not too good so that we can consider this model fullproof, still it can give us close values. The main problem though is a maximum error of 3.5 which means this model cannot be completed trusted. This is a result of the fact that even though a movie having excellent star cast and top director it may fail to impress the audience considering the storyline,screenplay etc.
+Neural Networks:
+Considered to be the most widely used and preffered  machine learning algorithm, Neural Networks gave us the best results. All the 6 features namely star cast,director,movie runtime,budget,youtube trailer views,genre were used as the input to the model. This model considering 6 nodes in input layer,6 nodes in hidden layer and 1 node in output layer gave us an average error of 0.87. This is quite better than the previous model, making it more apt for all cases. The maximum error problem still persists though, the reasons being the same.
+Fuzzy Logic System:
+This algorithm gave us an average error of 1.58, which is poor compared to the other two algorithms we used. Also this algorithm gave a maximum error of 4.5 which is quite vague. Hence, this model is completely unsuitable and was rejected.
+SVR (Support Vector Regression):
+This model gave us an average error of 1.23, which is better than the Polynomial Regression model. However, this model gave a maximum error of 4 on the test data. This makes this model a little less dependable. Though in many cases it gave a minimal error this model cannot be used for prediction since it gave few large (>2) errors as well.
+
+Finally it can be concluded that Neural Networks provided the best prediction model for this set of data and feature set. Although there are some irregularities which give rise to high error for some samples. This is probably due lack of features like storyline or maybe the movie was completely different than what even the public expected it to be. From these experiments it is clear that for some movies the IMDb rating can be predicted quite accurately while for others it can be quite vague. The best way though is using the Neural Networks model.
+
+Future Work:
+More features can be added like writers,public/critics reviews available pre-release,combination of features such as actor and genre (few actors are quite successful in a particular genre) etc. This way a more dependable model may be generated which gives little or no error for al the movies.

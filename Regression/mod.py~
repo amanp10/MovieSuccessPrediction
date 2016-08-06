@@ -1,0 +1,19 @@
+import string
+
+fi=open('final.tsv')
+st=fi.read()
+list1=st.split('\n')
+list1.remove('')
+fi.close()
+
+list2=[]
+for i in list1:
+	buff=i.split('\t')
+	buff2=buff[7].split(',')
+	max1=0
+	for j in buff2:
+		if max1 < int(j):
+			max1=int(j)
+	list2.append(i+'\t'+str(max1))
+
+fi=open('

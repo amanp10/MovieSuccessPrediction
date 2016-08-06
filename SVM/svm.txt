@@ -1,0 +1,11 @@
+Average Error on Test Data:
+[ 1.23123485]
+Maximum Error on Test Data:
+[ 4.02963068]
+
+Individual Error on Test Data (30 samples):
+[array([ 1.52963068]), array([ 0.12963068]), array([ 0.22963068]), array([ 0.32963068]), array([ 0.22963068]), array([ 0.02963068]), array([-0.77036932]), array([-1.37036932]), array([-1.27036932]), array([ 4.02963068]), array([ 2.32963068]), array([-0.17036932]), array([ 1.42963068]), array([-2.17036932]), array([-1.57036932]), array([ 1.22963068]), array([-0.07036932]), array([-1.67036932]), array([ 0.32963068]), array([ 0.92963068]), array([ 0.62963068]), array([ 0.52963068]), array([-1.57036932]), array([ 2.72963068]), array([-2.27036932]), array([ 1.82963068]), array([ 2.42963068]), array([ 1.52963068]), array([ 0.72963068]), array([-0.87036932])]
+
+Support Vector Regression, model details:
+SVR(C=1.0, cache_size=200, coef0=0.0, degree=3, epsilon=0.1, gamma='auto',
+  kernel='rbf', max_iter=-1, shrinking=True, tol=0.001, verbose=False)

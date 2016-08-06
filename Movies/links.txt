@@ -1,0 +1,5 @@
+http://dbpubs.stanford.edu:8091/~testbed/doc2/WebBase/
+
+https://api.cinemalytics.com/v1/actor/name/Nawaz/?auth_token=FB868227DB96E590CAA1D0D15FCCB110
+https://api.cinemalytics.com/v1/director/name/Farhan/?auth_token=FB868227DB96E590CAA1D0D15FCCB110
+http://www.omdbapi.com/?i=&plot=short&r=json

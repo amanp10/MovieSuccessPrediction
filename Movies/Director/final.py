@@ -1,0 +1,34 @@
+import string
+
+fi=open('directors_dict.tsv')
+st=fi.read()
+list1=st.split('\n')
+list1.remove('')
+print len(list1)
+fi.close()
+
+fi=open('final.tsv')
+st=fi.read()
+list2=st.split('\n')
+list2.remove('')
+print len(list2)
+fi.close()
+
+list3=[]
+for i in list2:
+	buff1=i.split('\t')
+	#print buff1
+	appended=False
+	for j in list1:
+		buff2=j.split('\t')
+		if buff1[3].lower() == buff2[0].lower():
+			s=i.replace(buff1[3],buff2[1])
+			list3.append(s)
+			appended=True
+	if appended==False:
+		list3.append(i)
+
+fi=open('final2.tsv','w')
+for i in list3:
+	fi.write(i+'\n')
+fi.close()

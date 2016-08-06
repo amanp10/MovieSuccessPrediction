@@ -1,0 +1,29 @@
+from sklearn import svm
+import string
+import cmath
+import scipy as sc
+
+data=sc.genfromtxt('data.tsv',delimiter='\t')
+training=data[0:120,:]
+test=data[120:150,:]
+
+x=training[:,2:8]
+y=training[:,8]
+
+clf=svm.SVR()
+d=clf.fit(x, y)
+sum1=0
+max_e=0
+list1=[]
+for i in test:
+	k=abs(clf.predict(i[2:8].reshape(1,-1))-i[8])
+	list1.append(clf.predict(i[2:8])-i[8])
+	sum1=sum1+k
+	if k > max_e:
+		max_e=k
+
+print sum1/30
+print max_e
+
+fi=open('svm.txt','w')
+fi.write(str(sum1/30)+'\n'+str(max_e)+'\n\n'+str(list1)+'\n\n'+str(d))

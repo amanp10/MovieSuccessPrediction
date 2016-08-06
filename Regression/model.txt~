@@ -1,0 +1,27 @@
+The Generated Model:-
+
+R(d,a,g)=M1*(0.535*d^2 - 2.939*d + 8.21) + M2*(0.495*a^2 - 2.547*a + 8.705) + M3*(-0.015*g^2+0.585*g+1.703)........for g>9
+R(d,a)=M4*(0.535*d^2 - 2.939*d + 8.21) + M5*(0.495*a^2 - 2.547*a + 8.705)..........................................for g<=9
+
+d=Director Rating
+a=Actor Rating
+g=Genre Label (1 to 18)
+Mi=Parameters
+M1+M2+M3=1 & M4+M5=1
+
+From Experimantal analysis:-
+M1=0.1
+M2=0.2
+M3=0.7
+M4=0.3
+M5=0.7
+
+Training data=120
+Test data=30
+Error=(E(R(d,a,g)-y)^2)/n
+
+Training error => n=120
+		Error=2.3
+
+Test error => n=30
+		Error=2.19

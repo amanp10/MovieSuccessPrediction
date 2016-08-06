@@ -1,0 +1,22 @@
+import json
+import string
+
+fi=open('omdb.json')
+st=fi.read()
+data=json.loads(st)
+fi.close()
+
+list1=[]
+for j in data:
+	i=j['Writer'].replace(' (screenplay)','').replace(' (story)','').replace(' (dialogues)','')
+	i=i.replace(' (script supervisor)','').replace(' (additional screenplay)','').replace(' (story consultant)','')
+	i=i.replace(', ',',')
+	buff=i.split(',')
+	for b in buff:
+		list1.append(b+'\t'+j['imdbRating'])
+
+fl=open('writer.tsv','w')
+for i in list1:
+	fl.write(i+'\n')
+fl.close()
+	
